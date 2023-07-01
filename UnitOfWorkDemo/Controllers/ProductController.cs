@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Net.Security;
 using UnitOfWorkDemo.Core.Models;
 using UnitOfWorkDemo.Services.Interfaces;
@@ -7,6 +8,8 @@ namespace UnitOfWorkDemo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+
     public class ProductController : ControllerBase
     {
         private IProductService _productService;
@@ -16,6 +19,7 @@ namespace UnitOfWorkDemo.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetProductList()
         {
            var productList = await _productService.GetAllProducts();

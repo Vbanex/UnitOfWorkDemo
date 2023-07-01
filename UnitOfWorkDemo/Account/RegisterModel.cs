@@ -29,7 +29,7 @@ namespace UnitOfWorkDemo.Account
             [DataType(DataType.Password)]
             [Compare("Password", ErrorMessage = "Password do not match")]
             public string ConfirmPassword { get; set;}
-        *
+        */
         }
 
        

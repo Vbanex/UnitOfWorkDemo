@@ -12,8 +12,8 @@ using UnitOfWorkDemo.Infrastructure;
 namespace UnitOfWorkDemo.Infrastructure.Migrations
 {
     [DbContext(typeof(DbContextClass))]
-    [Migration("20230626144751_v1")]
-    partial class v1
+    [Migration("20230701070315_v3")]
+    partial class v3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -202,7 +202,6 @@ namespace UnitOfWorkDemo.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")

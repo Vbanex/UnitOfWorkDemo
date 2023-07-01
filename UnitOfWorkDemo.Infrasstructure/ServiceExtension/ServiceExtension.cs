@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 using UnitOfWorkDemo.Core.Interfaces;
 using UnitOfWorkDemo.Infrastructure.Repositories;
 using UnitOfWorkDemo.Core.Models;
-using Microsoft.AspNetCore.Identity;
-
 
 namespace UnitOfWorkDemo.Infrastructure.ServiceExtension
 {
@@ -24,7 +22,7 @@ namespace UnitOfWorkDemo.Infrastructure.ServiceExtension
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<DbContextClass>();
+            
 
             return services;
         }
